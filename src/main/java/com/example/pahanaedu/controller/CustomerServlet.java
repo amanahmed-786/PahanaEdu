@@ -1,4 +1,6 @@
 package com.example.pahanaedu.controller;
 
-public class CustomerServlet {
+import jakarta.servlet.http.HttpServlet;
+
+public class CustomerServlet extends HttpServlet {
 }

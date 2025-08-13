@@ -30,8 +30,10 @@ public class LoginServlet extends HttpServlet {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                response.sendRedirect("dashboard.jsp"); // we will create this later
+                System.out.println("✅ Login successful. Redirecting...");
+                response.sendRedirect(request.getContextPath() + "/dashboard.jsp");
             } else {
+                System.out.println("❌ Login failed.");
                 response.getWriter().println("Invalid username or password!");
             }
 
